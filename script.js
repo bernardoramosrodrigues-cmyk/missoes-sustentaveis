@@ -44,7 +44,7 @@ const opcao2 = document.getElementById("opcao2");
 const mensagem = document.getElementById("mensagem");
 const pontuacao = document.getElementById("pontuacao");
 const progresso = document.getElementById("progresso");
-
+const barra = document.getElementById("barraProgresso");
 function carregarMissao(){
 
     titulo.innerHTML = missoes[fase].titulo;
@@ -55,6 +55,8 @@ function carregarMissao(){
 
     progresso.innerHTML =
     "Missão " + (fase + 1) + " de " + missoes.length;
+    barra.style.width =
+((fase + 1) / missoes.length) * 100 + "%";
 }
 
 function responder(opcao){
